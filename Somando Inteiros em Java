@@ -1,0 +1,21 @@
+package senac
+
+ import java . util . Scanner ;
+
+ public class SENAC {
+ public static void main ( String [] args ) {
+
+ Scanner input = new Scanner ( System . in ) ;
+
+ int num1 , num2 , soma ;
+
+ System . out . print (" Primeiro numero : ") ;
+ num1 = input . nextInt () ;
+
+ System . out . print (" Segundo numero : ") ;
+ num2 = input . nextInt () ;
+ soma = num1 + num2 ;
+ System . out . println (" Resultado da soma : " + soma ) ;
+
+ }
+ }
