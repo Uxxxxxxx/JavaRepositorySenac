@@ -1,0 +1,27 @@
+package estruturaDeControle;
+
+import java.util.Scanner;
+
+
+ public class EstruturaIfElseTeste {
+
+       
+	public static void main(String arg[]) {
+
+		   //criando objeto
+
+		   EstruturaIfElse obj = new EstruturaIfElse();
+		   Double nota;
+		   Scanner input = new Scanner(System.in);
+			
+	    	   //pegando dados do usuario
+	    	   
+	    	   System.out.print("Digite a nota:");
+	    	   nota = input.nextDouble();
+	    	   String resultado = obj.avaliacao(nota);
+	    	   String mencao = obj.mencaoAluno(nota);
+	    	   System.out.println("O aluno foi" + resultado + "com" + mencao);
+	    	   
+	       }
+  
+}//fim do metodo
