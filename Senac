@@ -1,0 +1,22 @@
+package aula4;
+
+public class Senac {
+   
+	String nomeCurso;
+	
+   public Senac (String s) {
+	   nomeCurso = s;
+   }
+   
+   public void setNomeCurso(String valor) {
+	   nomeCurso = valor; 
+   }
+   
+   public String getNomeCurso() {
+	   return nomeCurso;
+   }
+   
+   public void MostrarMensagem () {
+	   System.out.println("Bem vindo ao curso:" + getNomeCurso());
+   }
+}
