@@ -1,0 +1,53 @@
+package estruturaDeControle;
+
+public class EstruturaIfElse {
+	/*
+	 * notaAluno >8 <9 MS notaAluno>7<8 MM notaAluno<7 MN
+	 */
+	public String mencaoAluno2(double nota) {
+
+		String aux = "";
+		switch ((int) nota) {
+		case 9:
+			aux = "SS";
+			break;
+		case 8:
+			aux = "MS";
+			break;
+		case 7:
+			aux = "MM";
+			break;
+
+		default:
+			aux = "MN";
+			break;
+		}// fim switch
+		return aux;
+	}
+
+	public String mencaoAluno(double notaAluno) {
+		String aux;
+		if (notaAluno >= 9) {
+			aux = "SS";
+		}
+		if (notaAluno >= 8 && notaAluno < 9) {
+			aux = "MS";
+		}
+		if (notaAluno >= 7 && notaAluno < 8) {
+			aux = "MM";
+		} else {
+			aux = "MN";
+		}
+		return aux;
+	}
+
+	public String avaliacao(double notaAluno) {
+
+		String mencao;
+		if (notaAluno >= 7) {
+			mencao = "Aprovado";
+		} else
+			mencao = "reprovado";
+		return mencao;
+	}
+}
