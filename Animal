@@ -1,0 +1,46 @@
+package MichelExListaHeranca;
+
+public class Animal {
+
+		        Animal animal = new Animal("Animal", "Desconhecida", "caminhando");
+		        Dog dog = new Dog("Carlão", "Pit Bull", "caminhando");
+		        Cat cat = new Cat("Lilo", "Persa", "caminhando");
+
+		        animal.caminhar();
+		        dog.caminhar();
+		        dog.latir();
+		        cat.caminhar();
+		        cat.miar();
+		        
+		    	public Animal(String nome, String raca, String acao) {
+		    		
+		    	}
+		     
+		        public String getnome() {
+		            return nome;
+		        }
+		        
+		        public void setDog(String nome) {
+		            this.nome = nome;
+		        }
+		        
+		        public String getRaca() {
+		            return raca;
+		        }
+		        
+		        public void setRaca(String raca) {
+		            this.raca = raca;
+		        }
+		        
+		        public String getacao() {
+		            return acao;
+		        }
+		        
+		        public void setacao(String acao) {
+		            this.acao = acao;
+		        }
+		        
+		 
+	}
+
+}
