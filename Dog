@@ -1,0 +1,14 @@
+package MichelExListaHeranca;
+
+public class Dog {
+	public Dog(String nome, String raca, String acao) {
+        super(nome, raca, acao);
+        this.nome= nome;
+        this.raca= raca;
+        this.acao= acao;
+    }
+
+    public void latir() {
+        System.out.println("O cachorro está latindo");
+    }
+}
