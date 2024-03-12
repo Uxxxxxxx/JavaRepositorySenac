@@ -1,0 +1,114 @@
+package michelListaHeranca;
+
+import java.util.Scanner;
+
+public class MichelEx1Teste {
+	public static void main(String arg[]) {
+		  
+		 Scanner input= new Scanner(System.in);
+		 Console teclado=System.console();
+		 int escolheCadastro;
+		 String nome, matricula;
+		 double salario, bonus;
+		 
+		 System.out.print("Informe 1- para Funcionário \n 2- para Assistente \n 3- para Assistente Técnico \n 4- para Assistente Administrativo");
+		 escolheCadastro= nextInt();
+		 
+		 Switch(key){
+			 case1 value:{
+				 //teste da class Funcionário
+				   System.out.println("Informe o Nome do Funcionário:");
+				    nome= input.nextLine();
+				    
+				   System.out.println("Informe o Salário do Funcionário:");
+				    salario= input.nextDouble();
+				    
+			       MichelEx1Funcionario objFuncionario= new MichelEx1Funcionario(nome, salario);
+			       System.out.println("***********Informações do Funcionário: ************");
+			        objFuncionario.exibeDados();
+			        objFuncionario.addAumento();
+			        System.out.println("***********Informações do Funcionário: ************");
+			        objFuncionario.exibeDados(); 
+			        break;
+			      }//end case1
+		
+	         case2 value:{
+	        	 //teste da class Assistente
+	  		   System.out.print("Informe o Nome do Assistente:");
+	  		    nome= input.next();
+	  		    
+	  		    System.out.print("Informe o Salário do Assistente:");
+	  		    salario= input.nextDouble();
+	  		    
+	  		   System.out.print("Informe a Matrícula do Assistente:");
+	  		    matricula= input.next();
+	  		    
+	  	       MichelEx1Assistente objAssistente= new MichelEx1Assistente(nome, salario, matricula);
+	  	       System.out.println("***********Informações do Assistente: ************");
+	  	        objAssistente.exibeDados();
+	  	        objAssistente.addAumento();
+	  	        
+	  	       System.out.print("Informe novamente o Nome do Assistente: ");
+	  		    nome= input.next();
+	  		    
+	  		    objAssistente.setNome();
+	  		   System.out.println("***********Informações do Assistente: ************");
+	  	        objAssistente.exibeDados(); 
+	  	      break;
+			  }//end case2
+	         
+	           case3 value:{
+	        	 //teste da class Assistente Técnico
+	  		   System.out.print("Informe o Nome do Assistente Técnico:");
+	  		    nome= input.next();
+	  		    
+	  		    System.out.print("Informe o Salário do Assistente Técnico:");
+	  		    salario= input.nextDouble();
+	  		    
+	  		   System.out.print("Informe a Matrícula do Assistente Técnico:");
+	  		    matricula= input.next();
+	  		    
+	  		   System.out.print("Informe o Bonus do Assistente Técnico:");
+	  		    bonus= input.nextDouble();
+	  		    
+	  	       MichelEx1AssistenteTecnico objAssistenteTecnico= new MichelEx1AssistenteTecnico(nome, salario, matricula, bonus);
+	  	       System.out.println("***********Informações do Assistente Técnico: ************");
+	  	        objAssistenteTecnico.exibeDados();
+	  	        objAssistenteTecnico.addAumento();
+	  	        
+	  	       System.out.print("Informe novamente o Nome do Assistente Técnico:");
+	  		    nome= input.next();
+	  		    
+	  		    objAssistente.setNome();
+	  		   System.out.println("***********Informações do Assistente Técnico: ************");
+	  	        objAssistenteTecnico.exibeDados(); 
+	  	      break;
+	  	      
+	           case4 value:{
+	        	 //teste da class Assistente Administrativo
+	  		   System.out.print("Informe o Nome do Assistente Administrativo:");
+	  		    nome= input.next();
+	  		    
+	  		    System.out.print("Informe o Salário do Assistente Administrativo:");
+	  		    salario= input.nextDouble();
+	  		    
+	  		   System.out.print("Informe a Matrícula do Assistente Administrativo:");
+	  		    matricula= input.next();
+	  		    
+	  		   System.out.print("Informe o Turno do Assistente Administrativo:");
+	  		    bonus= input.nextDouble();
+	  		    
+	  		  System.out.print("Informe o Adicional Noturno do Assistente Administrativo:");
+	  		    bonus= input.nextDouble();
+	  		    
+	  	       MichelEx1AssistenteAdministrativo objAssistenteAdministrativo= new MichelEx1AssistenteAdministrativo(nome, salario, matricula, bonus, adicionalNoturno);
+	  	       System.out.println("***********Informações do Assistente Administrativo: ************");
+	  	        objAssistenteAdministrativo.exibeDados();
+	  	    
+			 default:
+				 System.out.print("Opção Inválida");
+		 }//end switch	 
+	}//end main
+ }//end class
+
+
