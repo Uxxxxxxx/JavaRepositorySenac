@@ -1,0 +1,20 @@
+package MichelListaHerancaBanco;
+
+public class MichelListaHerancaBancoContaPoupança {
+	class ContaPoupanca extends ContaBancaria {
+	    private double taxaJuros;
+	    private Date dataAniversario;
+	    
+	    public ContaPoupanca(String titular, double saldoInicial, double taxaJuros, Date dataAniversario) {
+	        super(titular, saldoInicial);
+	        this.taxaJuros = taxaJuros;
+	        this.dataAniversario = dataAniversario;
+	    }
+	    
+	    public double calculaRendimentos() {
+	        // Lógica para calcular os rendimentos da conta poupança com base na taxa de juros e saldo atual
+	        return saldo * taxaJuros;
+	    }
+	}
+
+}
