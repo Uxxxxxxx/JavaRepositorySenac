@@ -1,0 +1,14 @@
+package MichelListaHerancaPessoas;
+
+class Miseravel extends Pessoas {
+    public Miseravel(String nome, int idade) {
+        super(nome, idade);
+    }
+    
+    @Override
+    public void mendigar() {
+        System.out.println("A pessoa miserável " + getNome() + " está mendigando.");
+    }
+}
+
+
