@@ -1,0 +1,23 @@
+package michelListaHeranca;
+public class MichelEx1Assistente extends MichelEx1Funcionario {
+	private String matricula;//0245
+	//constructor da class Assistente
+	public MichelEx1Assistente(String nome, double salario, String matricula) {
+	//invocação do contructor do pai
+		super(nome, salario);
+		this.matricula = matricula;
+	public String getMatricula() {
+		return matricula;
+	}
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+	public void exibeDados(String matricula) {
+		 System.out.println("*************Informações de Assistente**************");
+		super.exibeDados();
+		 System.out.printf("Matrícula: %s\n", this.getMatricula());
+	}
+	public void setNome() {
+		// TODO Auto-generated method stub
+	}
+}
