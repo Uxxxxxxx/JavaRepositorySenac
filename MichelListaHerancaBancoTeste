@@ -1,0 +1,27 @@
+package MichelListaHerancaBanco;
+
+import java.util.Date;
+
+public class MichelListaHerancaBancoTeste {
+
+	public static void main(String[] args) {
+		 System.out.println("**************Informações do Cliente: ********************");
+        
+        ContaCorrente cc = new ContaCorrente("João", 20000.0, 7000.0, "123456789");
+        cc.deposito(7000.0);
+        cc.saque(28000.0);
+        
+        System.out.println();
+        
+        ContaPoupanca cp = new ContaPoupanca("Maria", 40000.0, 0.05, new Date());
+        cp.deposito(20000.0);
+        cp.saque(7000.0);
+        System.out.println("Rendimentos: R$" + cp.calculaRendimentos());
+    }
+	
+
+	
+ 
+
+	}
+
