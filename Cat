@@ -1,0 +1,14 @@
+package MichelExListaHeranca;
+
+public class Cat extends Animal {
+	 public Cat(String nome, String raca, String acao) {
+	        super(nome, raca, acao);
+	        this.nome= nome;
+	        this.raca= raca;
+	        this.acao= acao;
+	    }
+	    
+	    public void miar() {
+	        System.out.println("O gato está miando");
+	    }
+}
