@@ -1,0 +1,42 @@
+package MichelListaHerancaBanco;
+
+import java.util.Date;
+
+    public class ContaBancaria {
+                protected String titular;
+                protected double saldo;
+    
+
+    public ContaBancaria(String titular, double saldoInicial) {
+        this.titular = titular;
+        this.saldo = saldoInicial;
+    }
+    
+
+    public void deposito(double valor) {
+        saldo += valor;
+        System.out.println("Depósito de R$" + valor + " realizado. Saldo atual: R$" + saldo);
+    }
+    
+
+    public void saque(double valor) {
+        if (valor <= saldo) {
+            saldo -= valor;
+            System.out.println("Saque de R$" + valor + " realizado. Saldo atual: R$" + saldo);
+        } else {
+            System.out.println("Saldo insuficiente.");
+        }
+    }
+    
+
+    public void transferencia(ContaBancaria outraConta, double valor) {
+        if (valor <= saldo) {
+            saldo -= valor;
+            outraConta.deposito(valor);
+            System.out.println("Transferência de R$" + valor + " realizada para a conta de " + outraConta.titular);
+        } else {
+            System.out.println("Saldo insuficiente para realizar a transferência.");
+        }
+    }
+}
+
