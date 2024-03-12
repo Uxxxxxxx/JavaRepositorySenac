@@ -1,0 +1,24 @@
+package MichelListaHerancaPessoas;
+import java.util.Scanner;
+
+import MichelExListaHeranca.MichelExListaHerancaTeste;
+
+public class MichelListaHerancaPessoaTeste {
+	 Scanner input= new Scanner(System.in);
+	 Console teclado=System.console();
+     System.out.println("***********Informações da pessoa: ************");
+	
+    public static void main(String[] args) {
+        // Exemplo de uso da classe
+        Pessoas rica = new Rica("Maria", 30);
+        rica.fazerCompra(100.50);
+        
+        Pessoas pobre = new Pobre("João", 25);
+        pobre.trabalhar();
+        
+        Pessoas miseravel = new Miseravel("Carlos", 40);
+        miseravel.mendigar();
+    }
+}
+
+
