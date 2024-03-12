@@ -1,0 +1,23 @@
+package MichelListaHerancaBanco;
+
+public class ContaCorrente extends ContaBancaria {
+    private double limiteChequeEspecial;
+    private String numeroCartaoDebito;
+    
+    public ContaCorrente(String titular, double saldoInicial, double limiteChequeEspecial, String numeroCartaoDebito) {
+        super(titular, saldoInicial);
+        this.limiteChequeEspecial = limiteChequeEspecial;
+        this.numeroCartaoDebito = numeroCartaoDebito;
+    }
+    
+    @Override
+    public void saque(double valor) {
+        if (valor <= saldo + limiteChequeEspecial) {
+            saldo -= valor;
+            System.out.println("Saque de R$" + valor + " realizado. Saldo atual: R$" + saldo);
+        } else {
+            System.out.println("Limite de cheque especial insuficiente.");
+        }
+    }
+}
+
