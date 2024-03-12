@@ -1,0 +1,13 @@
+package MichelListaHerancaPessoas;
+
+class Rica extends Pessoas {
+    public Rica(String nome, int idade) {
+        super(nome, idade);
+    }
+    
+    @Override
+    public void fazerCompra(double dinheiro) {
+        System.out.println("A pessoa rica " + getNome() + " fez uma compra de R$" + dinheiro);
+    }
+}
+
