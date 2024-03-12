@@ -1,0 +1,48 @@
+package michelListaHeranca;
+
+public class MichelEx1Funcionario {
+   private String nome;
+   private double salario;
+private Object ganhoAnual;
+   
+   //construtor de classe
+   public MichelEx1Funcionario(String nome, double salario) {
+	   this.nome= nome;
+       this.salario= salario;
+   }//end construtor
+      
+   public void setNome (String novoNome){
+	   this.nome= novoNome;
+   }//end setNome
+   
+    public String getNome() {
+    	return this.nome;
+    }//end getNome
+    
+    public void setSalario (double novoSalario){
+ 	   this.salario= (novoSalario < 0.0) ? 0.0 : novoSalario;
+    }//end setSalario
+    
+     public double getSalario() {
+     	return this.salario;
+     }//end getSalario
+     
+     public void addAumento() {
+        double valorAumento = 0;
+		this.salario= (valorAumento < 0.0) ? this.salario : (this.salario + valorAumento);
+     }//end addAumento
+     
+     public double ganhoAnual() {
+    	 double salarioAnual= this.getSalario() * 13; //estamos trabalhando a nivel de CLT
+    	 return salarioAnual;
+     }//end ganhoAnual
+     
+      public void exibeDados() {
+    	  System.out.println("************************\n"
+    	  		            + "Nome: %s\n"
+    	  		            + "Salario: $%.2f\n "
+    			            + "Ganho Anual: $%.2f\n"
+    			            + "**********************\n", this.getNome(), this.getSalario(), this.ganhoAnual);
+}//end exibeDados
+    
+}//end class
