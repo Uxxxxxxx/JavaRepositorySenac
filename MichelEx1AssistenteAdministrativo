@@ -1,0 +1,32 @@
+package michelListaHeranca;
+public class MichelEx1AssistenteAdministrativo extends MichelEx1Assistente{
+private String turno;
+private double adicionalNoturno;
+	//cria construtor
+	public MichelEx1AssistenteTecnico(String nome, double salario, String matricula, String turno, double adicionalNoturno) {
+	       super(nome, salario, matricula)	
+	       this turno= this.setTurno(turno);
+	}//end construtor
+	public void setTurno(String turno) {
+		this.turno= turno;
+	}
+	public String getTurno() {
+		return this.turno;
+	}
+	public void setAdicionalNoturno(double valor) {
+		if (this.getTurno.equals("noite")) {
+			this.adicionalNoturno= (valor < 0.0) ? 0.0 : valor;//recebe adicional unicamente se trabalhar a noite
+		}else {
+			this.adicionalNoturno= 0.0;
+		}//end setAdicionalNoturno
+	   public double ganhoAnual() {
+	    	 double salarioAnual= (this.getSalario() + this.getAdicionalNoturno) * 13; //estamos trabalhando a nivel de CLT
+	    	 return salarioAnual;
+	     }//end ganhoAnual
+	   public void exibeDados() {
+			 System.out.println("*************Informações de Assistente Administrativo**************");
+			super.exibeDados();
+			 System.out.printf("Turno:%\n" this.getTurno());
+			 System.out.printf("AdicionalNoturno:$%.2f\n", this.getAdicionalNoturno());
+		}//end exibeDados
+}//end class
