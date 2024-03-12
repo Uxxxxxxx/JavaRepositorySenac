@@ -1,0 +1,15 @@
+public class Animais {
+    private String nome;
+
+    public Animais(String nome) {
+        this.nome = nome;
+    }
+
+    public void emitirSom() {
+        System.out.println("Som genérico do animal");
+    }
+
+    public String getNome() {
+        return nome;
+    }
+}
