@@ -1,0 +1,32 @@
+package MichelExListaHeranca;
+import java.util.Scanner;
+
+public class MichelExListaHerancaTeste {
+
+	public static void main(String[] args) {
+		 Scanner input= new Scanner(System.in);
+		 Console teclado=System.console();
+		 MichelExListaHerancaTeste objMichelExListaHeranca= new MichelExListaHerancaTeste(nome, raca, acao);
+	       System.out.println("***********Informações do Animal: ************");
+	}
+		if Animal = "Dog" {
+				acao()	
+	} else {
+		if Animal = "Cat" {
+					acao()	
+	}
+	  return Animal;
+		
+	}	
+		
+		  public caminhar() {
+		        System.out.println("O animal está caminhando");
+		    }
+
+		  public latir() {
+			  System.out.println("O animal está latindo");  
+	}
+		  
+		  public miar() {
+			  System.out.println("O animal está miando");  
+	}
