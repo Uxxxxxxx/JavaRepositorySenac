@@ -1,0 +1,14 @@
+package MichelListaHerancaPessoas;
+
+	class Pobre extends Pessoas {
+	    public Pobre(String nome, int idade) {
+	        super(nome, idade);
+	    }
+	    
+	    @Override
+	    public void trabalhar() {
+	        System.out.println("A pessoa pobre " + getNome() + " está trabalhando.");
+	    }
+}
+
+
